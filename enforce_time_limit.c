@@ -29,7 +29,7 @@ void enforce_time_limit(int time_limit) {
     // If it hasn't already terminated.
     if(child_id == 0) // "I am the child thread"
     {
-		sleep(time_limit);
+	sleep(time_limit);
         if( kill(parent_id, SIGTERM) == 0) {
         	printf("enforce_time_limit.c: Program terminated"
         	 " for taking longer than %d seconds\n", time_limit);
